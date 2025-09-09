@@ -18,4 +18,4 @@ This project is designed for learning purposes and demonstrates how a modern e-c
 ## Made by 🖋️
 
 **Muhmmmad Irtiza Khan**  
-LINK:
+LINK:https://muhmmmadirtizakhan.github.io/Amazon-clone/
