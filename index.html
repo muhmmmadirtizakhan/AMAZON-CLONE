@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        /* CSS from your project.css */
+        * {
+            margin: 0px;
+            font-family: arial;
+            border: border-box;
+        }
+        body {
+            margin: 0px;
+            font-family: arial;
+            background-color: #cccccc;
+        }
+        .navbar {
+            height: 60px;
+            background-color: #0f1111;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        .navlog {
+            height: 50px;
+            width: 100px;
+        }
+
+        .logu {
+            background-image: url('https://www.shutterstock.com/image-vector/chattogram-bangladesh-april-24-2023-260nw-2292992631.jpg');
+            background-size: cover;
+            height: 50px;
+            width: 100%;
+        }
+
+        .border {
+            border: 1.5px solid transparent;
+        }
+
+        .border:hover {
+            border: 1.5px solid white;
+        }
+
+        .hania {
+            font-size: 0.85rem;
+            color: #cccccc;
+            margin-left: 15px;
+            align-items: center;
+        }
+
+        .hasan {
+            font-size: 0.95rem;
+            color: #f1f1f1;
+            margin-left: 3px;
+        }
+
+        .hey {
+            display: flex;
+            align-items: center;
+        }
+
+        .search {
+            display: flex;
+            justify-content: center;
+            background-color: rgb(255, 201, 23);
+            width: 620px;
+            height: 40px;
+            border-radius: 4px;
+        }
+
+        .search:hover {
+            border: 3px solid rgb(255, 199, 15);
+        }
+
+        .we {
+            background-color: #f3f3f3;
+            width: 50px;
+            text-align: center;
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+            border: none;
+            border-right: 1px solid black !important;
+            width: 45px;
+            box-sizing: border-box;
+        }
+
+        .with {
+            width: 100%;
+            font-size: 1rem;
+            border: none;
+        }
+
+        .searchicon {
+            width: 45px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2rem;
+            background-color: rgb(255, 188, 3);
+            border-top-right-radius: 4px;
+            border-bottom-right-radius: 4px;
+            color: #0f1111;
+        }
+
+        span {
+            font-size: 0.7rem;
+        }
+
+        .hd {
+            font-size: 0.85rem;
+            font-weight: 700;
+        }
+
+        .navchart i {
+            font-size: 30px;
+        }
+
+        .navchart {
+            font-size: 20px;
+        }
+
+        .panel {
+            height: 39px;
+            background-color: #222f3d;
+            display: flex;
+            color: white;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+
+        .panel-ops p {
+            display: inline;
+            margin-left: 15px;
+        }
+
+        .panel-ops {
+            width: 70%;
+            font-weight: 0.85rem;
+        }
+
+        .panel-deals {
+            font-size: 0.9rem;
+            font-weight: 700;
+        }
+
+        /* HERO SECTION AND CAROUSEL STYLES - REFINED */
+        .hero-section {
+            height: 350px; /* Reduced height for better proportions */
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            background-color: #e3e6e6; /* Fallback color */
+        }
+
+        .hero-carousel-container {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .hero-carousel {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .hero-carousel-item {
+            min-width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center top; /* Changed to center top to ensure top alignment */
+            flex-shrink: 0;
+            background-repeat: no-repeat;
+        }
+
+        .high {
+            background-color: white;
+            height: 40px;
+            color: #0f1111;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.95rem;
+            width: 80%;
+            margin-bottom: 25px;
+            position: relative;
+            z-index: 3;
+            padding: 0 15px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .hero-section a {
+            color: #007185;
+        }
+
+        /* Scroll buttons for hero carousel */
+        .hero-section .scroll-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 2;
+            background-color: rgba(255, 255, 255, 0.7);
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: #0f1111;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            transition: background-color 0.2s, border-color 0.2s;
+        }
+
+        .hero-section .scroll-button:hover {
+            background-color: rgba(255, 255, 255, 1);
+        }
+
+        #heroScrollLeft {
+            left: 10px;
+        }
+
+        #heroScrollRight {
+            right: 10px;
+        }
+
+        .shop-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            background-color: rgb(230, 228, 228);
+        }
+
+        .box {
+            height: 450px;
+            width: 24%;
+            background-color: white;
+            padding: 20px 0px 15px;
+            margin-top: 15px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+
+        .box-image {
+            height: 340px;
+            background-size: contain; /* Changed to contain to ensure full image visibility */
+            background-position: center;
+            background-repeat: no-repeat;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .bos-content {
+            margin-left: 1rem;
+            margin-right: 1rem;
+        }
+
+        .bos-content h2 {
+            margin-bottom: 10px;
+            color: #0f1111;
+        }
+
+        .bos-content p {
+            color: #018ea7;
+            font-size: 0.9rem;
+            cursor: pointer;
+        }
+        .bos-content p:hover {
+            color: #c45500;
+            text-decoration: underline;
+        }
+
+        /* --- New styles for horizontal scroll section --- */
+        .products-carousel-container {
+            background-color: white;
+            margin: 20px auto 40px auto;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 5px rgba(0,0,0,0.1);
+            max-width: 98%;
+            border-radius: 8px;
+        }
+
+        .carousel-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .carousel-header h2 {
+            font-size: 1.3rem;
+            color: #0f1111;
+        }
+
+        .carousel-header a {
+            font-size: 0.9rem;
+            color: #007185;
+            text-decoration: none;
+        }
+
+        .carousel-header a:hover {
+            color: #c45500;
+            text-decoration: underline;
+        }
+
+        .products-carousel {
+            display: flex;
+            overflow-x: scroll;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+            padding-bottom: 10px;
+        }
+
+        /* Hide scrollbar for a cleaner look */
+        .products-carousel::-webkit-scrollbar {
+            display: none;
+        }
+        .products-carousel {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .carousel-item {
+            flex: 0 0 auto;
+            width: 200px;
+            margin-right: 15px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            overflow: hidden;
+            text-align: center;
+            padding-bottom: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .carousel-item:last-child {
+            margin-right: 0;
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: 150px;
+            object-fit: contain;
+            display: block;
+            margin-bottom: 10px;
+            padding: 10px;
+        }
+
+        .carousel-item .item-info {
+            padding: 0 10px;
+            text-align: left;
+        }
+
+        .carousel-item p.title {
+            font-size: 0.9rem;
+            color: #0f1111;
+            margin: 0;
+            height: 3.6em;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+        }
+
+        .carousel-item .price {
+            font-weight: bold;
+            color: #B12704;
+            margin-top: 5px;
+            font-size: 1rem;
+        }
+
+        /* Common scroll button positioning for product carousel */
+        .products-carousel-container .scroll-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.9);
+            border: 1px solid #ccc;
+            border-radius: 50%;
+            width: 45px;
+            height: 45px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            font-size: 1.8rem;
+            color: #0f1111;
+            z-index: 10;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            transition: background-color 0.2s, border-color 0.2s;
+        }
+
+        .products-carousel-container .scroll-button:hover {
+            background-color: rgba(255, 255, 255, 1);
+            border-color: #aaa;
+        }
+
+        #scrollLeft {
+            left: 5px;
+        }
+
+        #scrollRight {
+            right: 5px;
+        }
+
+        /* FOOTER STYLES */
+        footer {
+            margin-top: 30px;
+        }
+
+        .end {
+            background-color: #37475a;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            font-size: 0.9rem;
+            cursor: pointer;
+        }
+
+        .end:hover {
+            background-color: #485769;
+        }
+
+        .panel2 {
+            background-color: #232f3e;
+            color: white;
+            display: flex;
+            justify-content: space-around;
+            padding: 40px 0;
+        }
+
+        .panel2 ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .panel2 ul p {
+            font-weight: bold;
+            margin-bottom: 15px;
+            font-size: 1rem;
+        }
+
+        .panel2 ul a {
+            display: block;
+            color: #dddddd;
+            text-decoration: none;
+            font-size: 0.85rem;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+
+        .panel2 ul a:hover {
+            text-decoration: underline;
+        }
+
+        .panel3 {
+            background-color: #232f3e;
+            border-top: 1px solid #3a4553;
+            padding: 30px 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .panel3 .logu {
+            width: 100px;
+            height: 50px;
+            background-size: cover;
+        }
+
+        .panel4 {
+            background-color: #131a22;
+            color: #dddddd;
+            padding: 30px 0;
+            text-align: center;
+            font-size: 0.8rem;
+        }
+
+        .pages {
+            margin-bottom: 20px;
+        }
+
+        .pages a {
+            color: #dddddd;
+            margin: 0 10px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .pages a:hover {
+            text-decoration: underline;
+        }
+
+        .copyright {
+            margin-top: 10px;
+            color: #999;
+        }
+        
+            .logu{
+background-image: url('https://logos-world.net/wp-content/uploads/2020/04/Amazon-Symbol.jpg');
+background-size: cover;
+height: 50px;
+width:100px
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="navlog border">
+                <div class="logu"></div>
+            </div>
+            <div class="hello border">
+                <p class="hania">deliver to</p>
+                <div class="hey">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p class="hasan">pakistan</p>
+                </div>
+            </div>
+            <div class="search">
+                <select class="we">
+                    <option>ALL</option>
+                    <option>Electronics</option>
+                    <option>Watches</option>
+                    <option>ladies's Fashion</option>
+                    <option>Men's Fashion</option>
+                    <option>lagguage Organizer</option>
+                </select>
+                <input placeholder="search in amazaon" class="with">
+                <div class="searchicon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+            <div class="signup border">
+                <p><span>hello,sign in</span></p>
+                <p class="hd">account & lists</p>
+            </div>
+            <div class="signuphey border">
+                <p><span>returns</span></p>
+                <p class="hds ">& orders</p>
+            </div>
+            <div class="navchart border">
+                <i class="fa-solid fa-cart-shopping"></i>
+                cart
+            </div>
+        </div>
+        <div class="panel">
+            <div class="panel-all">
+<i class="fa-solid fa-bars"></i>
+        All
+    </div>
+    <div class="panel-ops">
+        <p>Today's Deals</p>
+<p>Registry</p>
+<p>Prime Video</p>
+<p>Gift Cards</p>
+<p>Customer Service</p>
+<p>Sell</p>
+    </div>
+            <div id="panel-deals">
+                Shop Deals In Electronics
+            </div>
+        </div>
+    </header>
+    <div class="hero-section">
+        <div class="hero-carousel-container">
+            <div class="hero-carousel" id="heroCarousel">
+                <div class="hero-carousel-item" style="background-image: url('https://m.media-amazon.com/images/I/61DUO0NqyyL._SX3000_.jpg');"></div>
+                <div class="hero-carousel-item" style="background-image: url('https://m.media-amazon.com/images/I/619geyiQI5L._SX3000_.jpg');"></div>
+                <div class="hero-carousel-item" style="background-image: url('https://m.media-amazon.com/images/I/61Yx5-N155L._SX3000_.jpg');"></div>
+                <div class="hero-carousel-item" style="background-image: url('https://m.media-amazon.com/images/I/71qcoYgEhzL._SX3000_.jpg');"></div>
+                <div class="hero-carousel-item" style="background-image: url('https://m.media-amazon.com/images/I/61TD5JLGhIL._SX3000_.jpg');"></div>
+            </div>
+        </div>
+        <div class="high">
+            <p>You are on the amazon.com. You can also shop on amazon Pakistan with millions of products for fast local delivery <a href="#">Click here to go to amazon.in</a></p>
+        </div>
+        <button id="heroScrollLeft" class="scroll-button">&lt;</button>
+        <button id="heroScrollRight" class="scroll-button">&gt;</button>
+    </div>
+    <div class="shop-section">
+        <div class="box1 box">
+            <div class="bos-content">
+                <h2>Get On Your Game</h2>
+                <div class="box-image" style="background-image: url('https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2024/Stores-Gaming/FinalGraphics/Fuji_Gaming_store_Dashboard_card_1x_EN._SY304_CB564799420_.jpg');"></div>
+                <p>See more</p>
+            </div>
+        </div>
+        <div class="box2 box">
+            <div class="bos-content">
+                <h2>Shop For Your Home </h2>
+                <div class="box-image" style="background-image: url('https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Events/2025/AIS_99SSD25/Fuji_SingleImageCard_99SSD25_1x._SY304_CB803111905_.jpg');"></div>
+                <p>See more</p>
+            </div>
+        </div>
+        <div class="box3 box">
+            <div class="bos-content">
+                <h2>Fashion Trends You Like</h2>
+                <div class="box-image" style="background-image: url('CURRENT.jpg');"></div>
+                <p>See more</p>
+            </div>
+        </div>
+        <div class="bos4 box">
+            <div class="bos-content">
+                <h2>Cleaning-Tools</h2>
+                <div class="box-image" style="background-image: url('https://m.media-amazon.com/images/I/717rVaGXZ4L._AC_UL480_FMwebp_QL65_.jpg');"></div>
+                <p>See more</p>
+            </div>
+        </div>
+        <div class="bos4 box">
+            <div class="bos-content">
+                <h2>Kitchen essentials</h2>
+                <div class="box-image" style="background-image: url('djjddjdjd.jpg');"></div>
+                <p>See more</p>
+            </div>
+        </div>
+        <div class="bos4 box">
+            <div class="bos-content">
+                <h2>Furniture</h2>
+                <div class="box-image" style="background-image: url('https://m.media-amazon.com/images/I/81pt+9hPvRL._AC_UL480_FMwebp_QL65_.jpg');"></div>
+                <p>See more</p>
+            </div>
+        </div>
+        <div class="bos4 box">
+            <div class="bos-content">
+                <h2>Top Kitchen appliances</h2>
+                <div class="box-image" style="background-image: url('KITCHEN.jpg');"></div>
+                <p>See more</p>
+            </div>
+        </div>
+        <div class="bos4 box">
+            <div class="bos-content">
+                <h2>Luggage Organizer</h2>
+                <div class="box-image" style="background-image: url('https://m.media-amazon.com/images/I/71puunyRkGL._AC_UL480_FMwebp_QL65_.jpg');"></div>
+                <p>See more</p>
+            </div>
+        </div>
+        <div class="bos4 box">
+            <div class="bos-content">
+                <h2>Branded Watches</h2>
+                <div class="box-image" style="background-image: url('https://m.media-amazon.com/images/I/61im3OsaksL._AC_UL480_FMwebp_QL65_.jpg');"></div>
+                <p>See more</p>
+            </div>
+        </div>
+        <div class="bos4 box">
+            <div class="bos-content">
+                <h2>Men's Fashion</h2>
+                <div class="box-image" style="background-image: url('https://m.media-amazon.com/images/I/710o0VupScL._AC_UL480_FMwebp_QL65_.jpg');"></div>
+                <p>See more</p>
+            </div>
+        </div>
+        <div class="bos4 box">
+            <div class="bos-content">
+                <h2>Ladies's Fashion</h2>
+                <div class="box-image" style="background-image: url('https://m.media-amazon.com/images/I/61JCHH0bX5L._AC_UL480_FMwebp_QL65_.jpg');"></div>
+                <p>See more</p>
+            </div>
+        </div>
+        <div class="bos4 box">
+            <div class="bos-content">
+                <h2>Softwares Available</h2>
+                <div class="box-image" style="background-image: url('https://m.media-amazon.com/images/I/71dIA+61J2L._AC_UY327_FMwebp_QL65_.jpg');"></div>
+                <p>See more</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="products-carousel-container">
+        <div class="carousel-header">
+            <h2>Popular products in Wireless internationally</h2>
+            <a href="#">See more</a>
+        </div>
+        <div class="products-carousel" id="productsCarousel">
+            <div class="carousel-item">
+                <img src="https://m.media-amazon.com/images/I/51oKJkR+k9L._AC_SY200_.jpg" alt="Wireless Product 1">
+                <div class="item-info">
+                    <p class="title">Example Product 1: Wireless Headphones with Noise Cancellation and Long Battery Life</p>
+                    <p class="price">$59.99</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://m.media-amazon.com/images/I/71XpjL4qkPL._AC_SY200_.jpg" alt="Wireless Product 2">
+                <div class="item-info">
+                    <p class="title">Example Product 2: Ultra-Compact Wireless Earbuds with Charging Case</p>
+                    <p class="price">$34.50</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://m.media-amazon.com/images/I/61oUfE5lY-L._AC_SY200_.jpg" alt="Wireless Product 3">
+                <div class="item-info">
+                    <p class="title">Example Product 3: Portable Bluetooth Speaker for Outdoor and Indoor Use</p>
+                    <p class="price">$45.00</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://m.media-amazon.com/images/I/61ppcpeZw1L._AC_SY200_.jpg" alt="Wireless Product 4">
+                <div class="item-info">
+                    <p class="title">Example Product 4: Wireless Gaming Mouse with High Precision Sensor</p>
+                    <p class="price">$29.99</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://m.media-amazon.com/images/I/610Jl4dUB7L._AC_SY200_.jpg" alt="Wireless Product 5">
+                <div class="item-info">
+                    <p class="title">Example Product 5: Smart Wireless Charger for Multiple Devices</p>
+                    <p class="price">$19.95</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://m.media-amazon.com/images/I/51oKJkR+k9L._AC_SY200_.jpg" alt="Wireless Product 6">
+                <div class="item-info">
+                    <p class="title">Example Product 6: Another Wireless Gadget Description Here</p>
+                    <p class="price">$65.00</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://m.media-amazon.com/images/I/71XpjL4qkPL._AC_SY200_.jpg" alt="Wireless Product 7">
+                <div class="item-info">
+                    <p class="title">Example Product 7: High-Quality Wireless Audio System</p>
+                    <p class="price">$120.00</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://m.media-amazon.com/images/I/71XpjL4qkPL._AC_SY200_.jpg" alt="Wireless Product 7">
+                <div class="item-info">
+                    <p class="title">Example Product 7: High-Quality Wireless Audio System</p>
+                    <p class="price">$120.00</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://m.media-amazon.com/images/I/51KP3UHdKML._AC_UY327_FMwebp_QL65_.jpg" alt="Wireless Product 7">
+                <div class="item-info">
+                    <p class="title">AI Real-Time Translation Earbuds for iPhone & Android - 144 Language Wireless Translator Headphones, 3-in-1 Bluetooth Earbuds with Portable Charging Case for Travel, Business, Learning
+                        4.6 out of 5 stars 70</p>
+                    <p class="price">$120.00</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://m.media-amazon.com/images/I/71uyX5g5G7L._AC_UY327_FMwebp_QL65_.jpg" alt="Wireless Product 7">
+                <div class="item-info">
+                    <p class="title">Example Product 8: High-Quality Wireless Audio System and noise efffectless</p>
+                    <p class="price">$160.00</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://m.media-amazon.com/images/I/81xr+BrYBwL._AC_UY327_FMwebp_QL65_.jpg" alt="Wireless Product 7">
+                <div class="item-info">
+                    <p class="title">Example Product 9: High-Quality Wireless Audio System and good quality</p>
+                    <p class="price">$90.00</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://m.media-amazon.com/images/I/61WKcjkiy5L._AC_UY327_FMwebp_QL65_.jpg" alt="Wireless Product 7">
+                <div class="item-info">
+                    <p class="title">Universal Travel Adapter with 2 PD20W USB-C & 2 QC18W USB-A Ports, Fast Charging International Power Plug Adapter, All-in-One Worldwide Adaptor Converter Wall Charger for US EU UK AUS Asia
+                        4.5 out of 5 stars </p>
+                    <p class="price">$180.00</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://m.media-amazon.com/images/I/61w+rTqJ1VL._AC_UY327_FMwebp_QL65_.jpg" alt="Wireless Product 7">
+                <div class="item-info">
+                    <p class="title">Mini Projector, Support 4K 1080P Portable Projector with Dual Band WIFI6 5G Wireless 5.2 Bluetooth Android 11, 200 ANSI Lumens, 180° Rotatable, Auto Keystone Correction,35"-130" Screen Video Projector
+                        4.0 out of 5 stars </p>
+                    <p class="price">$140.00</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="https://m.media-amazon.com/images/I/51tbWVPtckL._AC_UY327_FMwebp_QL65_.jpg" alt="Wireless Product 7">
+                <div class="item-info">
+                    <p class="title">PS4 Slim 500GB Console + Controller</p>
+                    <p class="price">$110.00</p>
+                </div>
+            </div>
+        </div>
+        <button id="scrollLeft" class="scroll-button">&lt;</button>
+        <button id="scrollRight" class="scroll-button">&gt;</button>
+    </div>
+    <div class="shop-section">
+        <div class="box">
+            <div class="bos-content">
+                <h2>Yosuda</h2>
+                <div class="box-image" style="background-image: url('https://m.media-amazon.com/images/I/71PYD65+psL._AC_UY327_FMwebp_QL65_.jpg');"></div>
+                <p>See more</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="bos-content">
+                <h2>House And Households</h2>
+                <div class="box-image" style="background-image: url('https://m.media-amazon.com/images/I/61g3ZXFb10L._AC_UL480_FMwebp_QL65_.jpg');"></div>
+                <p>See more</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="bos-content">
+                <h2>Sports</h2>
+                <div class="box-image" style="background-image: url('https://m.media-amazon.com/images/I/51fNN0bqk7L._AC_UL480_FMwebp_QL65_.jpg');"></div>
+                <p>See more</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="bos-content">
+                <h2>Skin Products</h2>
+                <div class="box-image" style="background-image: url('https://m.media-amazon.com/images/I/717F3ObzIeL._AC_UL480_FMwebp_QL65_.jpg');"></div>
+                <p>See more</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="bos-content">
+                <h2>Books Available</h2>
+                <div class="box-image" style="background-image: url('https://m.media-amazon.com/images/I/51UmNg33hCL._AC_UY399_FMwebp_.jpg?aicid=books-design-system-web');"></div>
+                <p>See more</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="bos-content">
+                <h2>Toys For Childrens</h2>
+                <div class="box-image" style="background-image: url('https://m.media-amazon.com/images/I/71+UUqhLe5L._AC_UL480_FMwebp_QL65_.jpg');"></div>
+                <p>See more</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="bos-content">
+                <h2>Crockery For Kitchen</h2>
+                <div class="box-image" style="background-image: url('https://img.drz.lazcdn.com/static/pk/p/38fbc07032b2926658c23b5c4dc7c052.jpg_200x200q80.avif');"></div>
+                <p>See more</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="bos-content">
+                <h2>Stylish Glasses</h2>
+                <div class="box-image" style="background-image:url('https://m.media-amazon.com/images/I/61tfFIkBmHL._AC_UL480_FMwebp_QL65_.jpg');"></div>
+                <p>See more</p>
+            </div>
+        </div>
+    </div>
+    
+   <footer>
+
+<div class="end">Back To Top</div>
+<div class="panel2">
+<ul>
+<p>Get to Know Us</p>
+<a>Careers</a>
+<a>Blog</a>
+<a>Investor Relations</a>
+<a>Investor Relations
+<a>Amazon Devices</a>
+<a>Amazon Science</a>
+</ul>
+
+<ul>
+<p>Make Money with Us</p>
+<a>Sell products on Amazon</a>
+<a>Sell on Amazon Business</a>
+<a>Sell apps on Amazon</a>
+<a>Become an Affiliate</a>
+<a>Advertise Your Products</a>
+<a>Self-Publish with Us</a>
+<a>Host an Amazon Hub</a>
+<a>›See More Make Money with Us</a>
+</ul>
+
+<ul>
+<p>
+Amazon Payment Products</p>
+<a>Amazon Business Card</a>
+<a>Shop with Points</a>
+<a>Reload Your Balance</a>
+<a>Amazon Currency Converter
+</a>
+</ul>
+
+
+<ul>
+<p>Let Us Help You</p>
+<a>Amazon and COVID-19</a>
+<a>Your Account</a>
+<a>Your Orders</a>
+<a>Shipping Rates & Policies</a>
+<a>Returns & Replacements</a>
+<a>Manage Your Content and Devices</a>
+<a>Help</a>
+</ul>
+</div>
+<div class="panel3">
+<div class="logu"></div>
+</div>
+<div class="panel4">
+<div class="pages">
+<a>conditions and use</a>
+<a>privacy notice</a>
+<a>concumer health data privacy disclosure</a>
+<a>your adds privacy choices</a>
+<div class="copyright">
+© 1996-2025, Amazon.com, Inc. or its affiliates
+</div>
+</div>
+</div>
+</footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Product Carousel Logic
+            const productsCarousel = document.getElementById('productsCarousel');
+            const productsScrollLeftBtn = document.getElementById('scrollLeft');
+            const productsScrollRightBtn = document.getElementById('scrollRight');
+
+            if (productsCarousel && productsScrollLeftBtn && productsScrollRightBtn) {
+                productsScrollRightBtn.addEventListener('click', () => {
+                    productsCarousel.scrollBy({
+                        left: 300,
+                        behavior: 'smooth'
+                    });
+                });
+
+                productsScrollLeftBtn.addEventListener('click', () => {
+                    productsCarousel.scrollBy({
+                        left: -300,
+                        behavior: 'smooth'
+                    });
+                });
+            }
+
+            // Hero Carousel Logic
+            const heroCarousel = document.getElementById('heroCarousel');
+            const heroScrollLeftBtn = document.getElementById('heroScrollLeft');
+            const heroScrollRightBtn = document.getElementById('heroScrollRight');
+            const heroItems = document.querySelectorAll('.hero-carousel-item');
+            let currentHeroIndex = 0;
+            const totalHeroItems = heroItems.length;
+            let heroAutoplayInterval;
+
+            function updateHeroCarousel() {
+                const offset = -currentHeroIndex * 100;
+                heroCarousel.style.transform = `translateX(${offset}%)`;
+            }
+
+            function showNextHeroItem() {
+                currentHeroIndex = (currentHeroIndex + 1) % totalHeroItems;
+                updateHeroCarousel();
+            }
+
+            function showPrevHeroItem() {
+                currentHeroIndex = (currentHeroIndex - 1 + totalHeroItems) % totalHeroItems;
+                updateHeroCarousel();
+            }
+
+            function startHeroAutoplay() {
+                clearInterval(heroAutoplayInterval);
+                heroAutoplayInterval = setInterval(showNextHeroItem, 3000);
+            }
+
+            // Manual navigation for hero carousel
+            if (heroScrollLeftBtn && heroScrollRightBtn) {
+                heroScrollRightBtn.addEventListener('click', () => {
+                    showNextHeroItem();
+                    startHeroAutoplay();
+                });
+                heroScrollLeftBtn.addEventListener('click', () => {
+                    showPrevHeroItem();
+                    startHeroAutoplay();
+                });
+            }
+
+            // Pause autoplay when hovering over carousel
+            heroCarousel.addEventListener('mouseenter', () => {
+                clearInterval(heroAutoplayInterval);
+            });
+
+            heroCarousel.addEventListener('mouseleave', () => {
+                startHeroAutoplay();
+            });
+
+            // Initial load and autoplay start
+            updateHeroCarousel();
+            startHeroAutoplay();
+        });
+    </script>
+
+</body>
+</html>
