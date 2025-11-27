@@ -1,0 +1,509 @@
+* {
+    margin: 0px;
+    font-family: arial;
+    border: border-box;
+}
+body {
+    margin: 0px;
+    font-family: arial;
+    background-color: #cccccc;
+}
+.navbar {
+    height: 60px;
+    background-color: #0f1111;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.navlog {
+    height: 50px;
+    width: 100px;
+}
+
+.logu {
+    background-image: url('https://logos-world.net/wp-content/uploads/2020/04/Amazon-Symbol.jpg');
+    background-size: cover;
+    height: 50px;
+    width: 100%;
+}
+
+.border {
+    border: 1.5px solid transparent;
+}
+
+.border:hover {
+    border: 1.5px solid white;
+}
+
+.hania {
+    font-size: 0.85rem;
+    color: #cccccc;
+    margin-left: 15px;
+    align-items: center;
+}
+
+.hasan {
+    font-size: 0.95rem;
+    color: #f1f1f1;
+    margin-left: 3px;
+}
+
+.hey {
+    display: flex;
+    align-items: center;
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(255, 201, 23);
+    width: 620px;
+    height: 40px;
+    border-radius: 4px;
+}
+
+.search:hover {
+    border: 3px solid rgb(255, 199, 15);
+}
+
+.we {
+    background-color: #f3f3f3;
+    width: 50px;
+    text-align: center;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border: none;
+    border-right: 1px solid black !important;
+    width: 45px;
+    box-sizing: border-box;
+}
+
+.with {
+    width: 100%;
+    font-size: 1rem;
+    border: none;
+}
+
+.searchicon {
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    background-color: rgb(255, 188, 3);
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    color: #0f1111;
+}
+
+span {
+    font-size: 0.7rem;
+}
+
+.hd {
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.navchart i {
+    font-size: 30px;
+}
+
+.navchart {
+    font-size: 20px;
+}
+
+.panel {
+    height: 39px;
+    background-color: #222f3d;
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.panel-ops p {
+    display: inline;
+    margin-left: 15px;
+}
+
+.panel-ops {
+    width: 70%;
+    font-weight: 0.85rem;
+}
+
+.panel-deals {
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+/* HERO SECTION AND CAROUSEL STYLES - REFINED */
+.hero-section {
+    height: 350px; /* Reduced height for better proportions */
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background-color: #e3e6e6; /* Fallback color */
+}
+
+.hero-carousel-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.hero-carousel {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.hero-carousel-item {
+    min-width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center top; /* Changed to center top to ensure top alignment */
+    flex-shrink: 0;
+    background-repeat: no-repeat;
+}
+
+.high {
+    background-color: white;
+    height: 40px;
+    color: #0f1111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.95rem;
+    width: 80%;
+    margin-bottom: 25px;
+    position: relative;
+    z-index: 3;
+    padding: 0 15px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.hero-section a {
+    color: #007185;
+}
+
+/* Scroll buttons for hero carousel */
+.hero-section .scroll-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #0f1111;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.hero-section .scroll-button:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+#heroScrollLeft {
+    left: 10px;
+}
+
+#heroScrollRight {
+    right: 10px;
+}
+
+.shop-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: rgb(230, 228, 228);
+}
+
+.box {
+    height: 450px;
+    width: 24%;
+    background-color: white;
+    padding: 20px 0px 15px;
+    margin-top: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.box-image {
+    height: 340px;
+    background-size: contain; /* Changed to contain to ensure full image visibility */
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.bos-content {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.bos-content h2 {
+    margin-bottom: 10px;
+    color: #0f1111;
+}
+
+.bos-content p {
+    color: #018ea7;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+.bos-content p:hover {
+    color: #c45500;
+    text-decoration: underline;
+}
+
+/* --- New styles for horizontal scroll section --- */
+.products-carousel-container {
+    background-color: white;
+    margin: 20px auto 40px auto;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    max-width: 98%;
+    border-radius: 8px;
+}
+
+.carousel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.carousel-header h2 {
+    font-size: 1.3rem;
+    color: #0f1111;
+}
+
+.carousel-header a {
+    font-size: 0.9rem;
+    color: #007185;
+    text-decoration: none;
+}
+
+.carousel-header a:hover {
+    color: #c45500;
+    text-decoration: underline;
+}
+
+.products-carousel {
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 10px;
+}
+
+/* Hide scrollbar for a cleaner look */
+.products-carousel::-webkit-scrollbar {
+    display: none;
+}
+.products-carousel {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.carousel-item {
+    flex: 0 0 auto;
+    width: 200px;
+    margin-right: 15px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.carousel-item:last-child {
+    margin-right: 0;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.carousel-item .item-info {
+    padding: 0 10px;
+    text-align: left;
+}
+
+.carousel-item p.title {
+    font-size: 0.9rem;
+    color: #0f1111;
+    margin: 0;
+    height: 3.6em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.carousel-item .price {
+    font-weight: bold;
+    color: #B12704;
+    margin-top: 5px;
+    font-size: 1rem;
+}
+
+/* Common scroll button positioning for product carousel */
+.products-carousel-container .scroll-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.8rem;
+    color: #0f1111;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.products-carousel-container .scroll-button:hover {
+    background-color: rgba(255, 255, 255, 1);
+    border-color: #aaa;
+}
+
+#scrollLeft {
+    left: 5px;
+}
+
+#scrollRight {
+    right: 5px;
+}
+
+/* FOOTER STYLES */
+footer {
+    margin-top: 30px;
+}
+
+.end {
+    background-color: #37475a;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.end:hover {
+    background-color: #485769;
+}
+
+.panel2 {
+    background-color: #232f3e;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 0;
+}
+
+.panel2 ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.panel2 ul p {
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.panel2 ul a {
+    display: block;
+    color: #dddddd;
+    text-decoration: none;
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.panel2 ul a:hover {
+    text-decoration: underline;
+}
+
+.panel3 {
+    background-color: #232f3e;
+    border-top: 1px solid #3a4553;
+    padding: 30px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.panel3 .logu {
+    width: 100px;
+    height: 50px;
+    background-size: cover;
+}
+
+.panel4 {
+    background-color: #131a22;
+    color: #dddddd;
+    padding: 30px 0;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+.pages {
+    margin-bottom: 20px;
+}
+
+.pages a {
+    color: #dddddd;
+    margin: 0 10px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.pages a:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    margin-top: 10px;
+    color: #999;
+}
